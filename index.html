@@ -2,462 +2,50 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengumuman Kelulusan Kelas XII</title>
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            max-width: 600px;
-            width: 100%;
-            padding: 40px;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-        
-        .logo {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        
-        .header h1 {
-            color: #0f2027;
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-        
-        .header p {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .header .badge {
-            display: inline-block;
-            background: #e8f5e9;
-            color: #2e7d32;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-top: 12px;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
-        input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e0e0e0;
-            border-radius: 14px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background: #fafafa;
-        }
-        
-        input:focus {
-            outline: none;
-            border-color: #2c5364;
-            background: white;
-            box-shadow: 0 0 0 4px rgba(44,83,100,0.1);
-        }
-        
-        button {
-            width: 100%;
-            padding: 14px;
             background: linear-gradient(135deg, #0f2027 0%, #203a43 100%);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        button:active {
-            transform: translateY(0);
-        }
-        
-        button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-        
-        .result-card {
-            margin-top: 30px;
-            border-radius: 20px;
-            background: #f8f9fa;
-            display: none;
-            overflow: hidden;
-            animation: slideUp 0.4s ease;
-        }
-        
-        .result-card.show {
-            display: block;
-        }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .result-header {
-            padding: 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            margin: 0;
             color: white;
         }
-        
-        .result-header h3 {
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-        
-        .result-header p {
-            font-size: 13px;
-            opacity: 0.9;
-        }
-        
-        .result-body {
-            padding: 24px;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 14px;
-            margin-bottom: 25px;
-        }
-        
-        .info-item {
-            padding: 12px;
-            background: white;
-            border-radius: 14px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-            border: 1px solid #eee;
-        }
-        
-        .info-label {
-            font-weight: 600;
-            color: #888;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-        }
-        
-        .info-value {
-            font-size: 15px;
-            color: #333;
-            font-weight: 500;
-        }
-        
-        .download-status {
+        .redirect-container {
             text-align: center;
-            margin-top: 10px;
-            font-size: 14px;
-            padding: 10px;
-            border-radius: 10px;
+            padding: 2rem;
         }
-        
-        .download-status.success {
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-        
-        .download-status.error {
-            background: #ffebee;
-            color: #c62828;
-        }
-        
-        .error-message {
-            background: #ffebee;
-            color: #c62828;
-            padding: 16px;
-            border-radius: 16px;
-            margin-top: 20px;
-            text-align: center;
-            font-size: 14px;
-            border-left: 4px solid #c62828;
-        }
-        
-        .loading {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 2px solid rgba(255,255,255,.3);
+        .loader {
+            border: 4px solid rgba(255,255,255,0.3);
             border-radius: 50%;
-            border-top-color: white;
-            animation: spin 0.6s ease infinite;
-            vertical-align: middle;
-            margin-right: 8px;
+            border-top: 4px solid white;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
         }
-        
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            font-size: 11px;
-            color: #aaa;
-        }
-        
-        .info-box {
-            background: #e3f2fd;
-            padding: 14px;
-            border-radius: 14px;
-            margin-top: 20px;
-            font-size: 13px;
-            color: #1565c0;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        
-        @media (max-width: 500px) {
-            .container {
-                padding: 25px;
-            }
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            .header h1 {
-                font-size: 20px;
-            }
+        a {
+            color: #ffd700;
         }
     </style>
+    <script>
+        window.location.href = "https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec";
+    </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">🎓</div>
-            <h1>SURAT KETERANGAN LULUS</h1>
-            <p>SMA Negeri 4 Pagaralam<br>Tahun Ajaran 2025/2026</p>
-            <div class="badge">✓ LULUS 100%</div>
-        </div>
-        
-        <div class="form-group">
-            <label for="nisn">🔢 Masukkan NISN (Nomor Induk Siswa Nasional)</label>
-            <input type="text" id="nisn" placeholder="Contoh: 1234567890" maxlength="10" autocomplete="off">
-        </div>
-        
-        <button id="btnCek" onclick="cekData()">🔍 Cek Data & Unduh Surat</button>
-        
-        <div id="result"></div>
-        
-        <div class="info-box">
-            ℹ️ Masukkan NISN untuk menampilkan data dan mengunduh Surat Keterangan Lulus
-        </div>
-        
-        <div class="footer">
-            <p>© 2025 SMA Negeri 4 Pagaralam | Surat Keterangan Lulus - Kelas XII</p>
-        </div>
+    <div class="redirect-container">
+        <div class="loader"></div>
+        <p>Mengarahkan Anda ke halaman pengumuman kelulusan...</p>
+        <p>Jika tidak otomatis terarah, <a href="https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec">klik di sini</a>.</p>
     </div>
-    
-    <script>
-        // ⚠️ GANTI URL INI dengan URL Web App Google Apps Script Anda!
-        const API_BASE = "https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec";
-        
-        async function cekData() {
-            const nisn = document.getElementById('nisn').value.trim();
-            const btn = document.getElementById('btnCek');
-            
-            if (!nisn) {
-                showError('Silakan masukkan NISN Anda');
-                return;
-            }
-            
-            if (nisn.length < 8 || nisn.length > 10) {
-                showError('NISN tidak valid (8-10 digit angka)');
-                return;
-            }
-            
-            if (!/^\d+$/.test(nisn)) {
-                showError('NISN harus berupa angka');
-                return;
-            }
-            
-            btn.disabled = true;
-            btn.innerHTML = '<span class="loading"></span> Memeriksa data...';
-            
-            try {
-                // Panggil API untuk cek data
-                const response = await fetch(`${API_BASE}?action=cek&nisn=${encodeURIComponent(nisn)}`);
-                const data = await response.json();
-                
-                if (!data.found) {
-                    throw new Error(data.error || 'NISN tidak ditemukan');
-                }
-                
-                // Tampilkan data siswa
-                displayResult(data);
-                
-                // Langsung unduh PDF
-                await downloadPDF(nisn);
-                
-            } catch (err) {
-                showError('❌ ' + err.message);
-                resetButton(btn);
-            }
-        }
-        
-        function displayResult(data) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `
-                <div class="result-card show">
-                    <div class="result-header">
-                        <h3>✅ SURAT KETERANGAN LULUS</h3>
-                        <p>Sedang diproses, silakan tunggu...</p>
-                    </div>
-                    <div class="result-body">
-                        <div class="info-grid">
-                            <div class="info-item">
-                                <div class="info-label">Nama Lengkap</div>
-                                <div class="info-value">${escapeHtml(data.nama)}</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">NISN</div>
-                                <div class="info-value">${data.nisn}</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Jenis Kelamin</div>
-                                <div class="info-value">${data.jenisKelamin}</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Tempat Lahir</div>
-                                <div class="info-value">${data.tempatLahir}</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Kelas</div>
-                                <div class="info-value">${data.kelas}</div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-label">Status</div>
-                                <div class="info-value">🎓 LULUS</div>
-                            </div>
-                        </div>
-                        <div id="downloadStatus" class="download-status">
-                            <span class="loading"></span> Mengunduh surat...
-                        </div>
-                    </div>
-                </div>
-            `;
-        }
-        
-        async function downloadPDF(nisn) {
-            const statusDiv = document.getElementById('downloadStatus');
-            
-            try {
-                // Buka tab baru dengan URL download (akan memicu download file)
-                const downloadUrl = `${API_BASE}?action=download&nisn=${encodeURIComponent(nisn)}`;
-                window.open(downloadUrl, '_blank');
-                
-                if (statusDiv) {
-                    statusDiv.innerHTML = '✅ Surat berhasil diunduh! File akan muncul di folder Downloads Anda.';
-                    statusDiv.className = 'download-status success';
-                }
-                
-                // Ubah header
-                const headerDiv = document.querySelector('.result-header');
-                if (headerDiv) {
-                    headerDiv.innerHTML = '<h3>✅ SURAT TELAH TERUNDUH</h3><p>File PDF telah disimpan di perangkat Anda</p>';
-                }
-                
-            } catch (err) {
-                if (statusDiv) {
-                    statusDiv.innerHTML = '❌ Gagal mengunduh: ' + err.message;
-                    statusDiv.className = 'download-status error';
-                } else {
-                    showError('Gagal mengunduh: ' + err.message);
-                }
-            } finally {
-                resetButton(document.getElementById('btnCek'));
-            }
-        }
-        
-        function escapeHtml(text) {
-            if (!text) return '';
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-        
-        function showError(message) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = `<div class="error-message">⚠️ ${message}</div>`;
-        }
-        
-        function resetButton(btn) {
-            if (btn) {
-                btn.disabled = false;
-                btn.innerHTML = '🔍 Cek Data & Unduh Surat';
-            }
-        }
-        
-        // Enter key support
-        document.getElementById('nisn').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                cekData();
-            }
-        });
-        
-        // Auto focus ke input NISN
-        document.getElementById('nisn').focus();
-        
-        // Hapus parameter URL jika ada (bersihkan redirect)
-        if (window.location.search) {
-            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-            window.history.replaceState({}, document.title, newUrl);
-        }
-    </script>
 </body>
 </html>
