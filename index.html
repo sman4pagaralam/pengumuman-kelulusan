@@ -2,52 +2,39 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <!-- Meta Refresh untuk pengalihan otomatis -->
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pengumuman Kelulusan Kelas XII</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 100%);
+        * {
             margin: 0;
-            color: white;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .redirect-container {
-            text-align: center;
-            padding: 2rem;
+        body {
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            font-family: sans-serif;
         }
-        .loader {
-            border: 4px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            border-top: 4px solid white;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        a {
-            color: #ffd700;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
         }
     </style>
-    <!-- JavaScript fallback untuk pengalihan -->
-    <script>
-        window.location.href = "https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec";
-    </script>
 </head>
 <body>
-    <div class="redirect-container">
-        <div class="loader"></div>
-        <p>Mengarahkan Anda ke halaman pengumuman kelulusan...</p>
-        <p>Jika tidak otomatis terarah, <a href="https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec">klik di sini</a>.</p>
-    </div>
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbzxC6n2X-zbHORv44bO85UZSVI-SuunRXxAiA6z6V6cdWGfrR0gabI5kJ9bWQ-o2Wyd/exec" 
+        title="Surat Keterangan Lulus">
+    </iframe>
 </body>
 </html>
